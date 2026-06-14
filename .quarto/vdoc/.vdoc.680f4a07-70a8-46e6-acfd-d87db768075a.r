@@ -1,0 +1,39 @@
+#
+#
+#
+#
+#
+#
+#
+#
+#| message: false
+#| echo: false
+#| label: setup
+library(tidyverse)
+#
+#
+#
+#| message: false
+#| echo: false
+ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
+	geom_point(size = 3) +
+	labs(
+		title = "Measurements for Different Species of Iris",
+		subtitle = "Virginica has the longest sepals",
+		x = "Sepal Width",
+		y = "Sepal Length",
+		caption = "Fisher (1936)",
+		color = "Species"
+	) +
+	theme_gray(base_size = 16) +
+	theme(
+		plot.title = element_text(size = 20),
+		plot.subtitle = element_text(size = 16),
+		plot.caption = element_text(hjust = 1),
+		legend.title = element_text(size = 16),
+		legend.text = element_text(size = 14)
+	)
+#
+#
+#
+#
